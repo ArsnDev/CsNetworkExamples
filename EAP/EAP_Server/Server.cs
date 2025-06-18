@@ -1,5 +1,7 @@
 ﻿using System.Net;
+using System.Net.Mail;
 using System.Net.Sockets;
+using System.Text;
 
 namespace EAP_Server;
 internal class Server
@@ -36,6 +38,35 @@ internal class Server
         if (pending == false)
         {
             AcceptCompleted(serverSocket, e);
+        }
+
+        SocketAsyncEventArgs arg = new SocketAsyncEventArgs();
+        arg.Completed += ReceiveCompleted;
+        byte[] buffer = new byte[256];
+        arg.SetBuffer(buffer, 0, buffer.Length);
+        bool pending_2 = clientSocket.ReceiveAsync(arg);
+        if (pending_2 == false)
+        {
+            ReceiveCompleted(clientSocket, arg);
+        }
+    }
+    private static void ReceiveCompleted(object? sender, SocketAsyncEventArgs e)
+    {
+        Socket clientSocket = (Socket)sender;
+        if(e.BytesTransferred < 1)
+        {
+            Console.WriteLine("client disconnect");
+            clientSocket.Dispose();
+            e.Dispose();
+            return;
+        }
+        Console.WriteLine(Encoding.UTF8.GetString(e.Buffer));
+        byte[] buffer = new byte[256];
+        e.SetBuffer(buffer, 0, buffer.Length);
+        bool pending = clientSocket.ReceiveAsync(e);
+        if (pending == false)
+        {
+            ReceiveCompleted(clientSocket, e);
         }
     }
 }
