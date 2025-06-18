@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36202.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EAP_Server", "EAP_Server\EAP_Server.csproj", "{C4603F8A-3985-4530-8CBE-40D4F1ACB5EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EAP_Client", "EAP_Client\EAP_Client.csproj", "{30907782-74C4-4238-A969-63E838306B2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4603F8A-3985-4530-8CBE-40D4F1ACB5EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4603F8A-3985-4530-8CBE-40D4F1ACB5EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4603F8A-3985-4530-8CBE-40D4F1ACB5EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4603F8A-3985-4530-8CBE-40D4F1ACB5EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30907782-74C4-4238-A969-63E838306B2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30907782-74C4-4238-A969-63E838306B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30907782-74C4-4238-A969-63E838306B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30907782-74C4-4238-A969-63E838306B2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A76F63BF-45AE-442E-836F-3FE749061985}
+	EndGlobalSection
+EndGlobal

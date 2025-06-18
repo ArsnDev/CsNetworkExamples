@@ -1,0 +1,73 @@
+# ===================================================================
+# Visual Studio / .NET 용 표준 .gitignore 파일
+# ===================================================================
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# IDE-specific folders
+.vs/
+.idea/
+.vscode/
+
+# Build results
+# 가장 중요한 부분! bin, obj 폴더를 무시하여 컴파일된 결과물(exe, dll)이
+# 저장소에 포함되지 않도록 합니다.
+**/[Bb]in/
+**/[Oo]bj/
+
+# Rider - https://www.jetbrains.com/help/rider/Rider_Platform_Specific_Assets.html
+**/[Rr]eSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Mac / Linux files
+*.swp
+
+# Build files
+*.nupkg
+*.patch
+*.props.user
+*.pubxml.user
+*dependencies.xml
+*dependencies.props
+*Assets.cache
+*build-props.props
+
+# NuGet packages
+# NuGet 패키지는 프로젝트 빌드 시 자동으로 복원되므로 저장소에 포함할 필요가 없습니다.
+**/packages/
+*.nuget.props
+*.nuget.targets
+
+# Log and test results
+*.log
+*.trx
+TestResults/
+coverage.cobertura.xml
+/CodeCoverage
+
+# Secrets
+# 보안에 민감한 정보는 저장소에 올리지 않는 것이 좋습니다.
+secrets.json
+appsettings.Development.json
+
+# Runtime files
+*.pid
+*.seed
+*.pid.lock
+
+# OS-generated files
+# Windows
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
