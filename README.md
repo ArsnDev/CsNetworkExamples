@@ -64,12 +64,3 @@ CsNetworkExamples/
 
 - .NET 8.0이 설치되어 있어야 합니다.
 - 본 프로젝트는 각 비동기 방식의 기본적인 동작을 보여주기 위한 예제 코드입니다. 따라서 안정적인 종료(Graceful Shutdown)와 같은 예외 처리는 구현되어 있지 않습니다.
-
-```bash
-# 서버 실행 예시 (TAP 방식)
-cd TAP/TAP_Server
-dotnet run
-
-# 클라이언트 실행 예시 (TAP 방식)
-cd TAP/TAP_Client
-dotnet run
